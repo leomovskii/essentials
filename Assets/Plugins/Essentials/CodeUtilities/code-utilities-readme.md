@@ -1,7 +1,7 @@
 # IntFlagUtility
 This is a utility for packing and unpacking boolean flags into a single int value. The class allows you to compactly store up to 32 boolean values ​​(flags) in a single number, which saves memory and simplifies working with multiple flags. In addition to packing and unpacking, the utility allows you to modify individual flags and check for other flags.
 
-## Methods:
+## Methods
 * **Pack(bool[] flags)** — packs an array of boolean values ​​into a single integer (int).
 * **Unpack(int packedFlags)** — unpacks flags from an integer back into an array of boolean values.
 * **ModifyFlag(int packedFlags, int flagIndex, bool newFlagState)** — changes the state of a specific flag in a packed value.
@@ -36,7 +36,7 @@ public class FlagTest : MonoBehaviour {
 # NumberShortenerUtility
 The NumberShortenerUtility class shortens large numbers by adding appropriate suffixes (e.g., "K", "M", "B", etc.) based on the magnitude of the number. It works for numbers in thousands, millions, billions, etc., and allows formatting of the shortened number using a specified format string. The suffix can also be set to uppercase or lowercase.
 
-## Methods:
+## Methods
 * **Short(double number, string format = "0", bool uppercase = true)** - takes a number and returns it in a shortened form with an appropriate suffix.
 
 You can provide a format for the number (e.g., "0.0" for one decimal place). The suffix can be uppercase or lowercase based on the uppercase flag.
