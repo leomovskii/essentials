@@ -34,7 +34,7 @@ namespace Essentials {
 				}
 			}
 
-			if (shouldShow)
+			if (shouldShow == showIf.ExpectedValue)
 				EditorGUI.PropertyField(position, property, label, true);
 		}
 
@@ -64,7 +64,7 @@ namespace Essentials {
 				}
 			}
 
-			return shouldShow ? EditorGUI.GetPropertyHeight(property, label, true) : -EditorGUIUtility.standardVerticalSpacing;
+			return shouldShow == showIf.ExpectedValue ? EditorGUI.GetPropertyHeight(property, label, true) : -EditorGUIUtility.standardVerticalSpacing;
 		}
 	}
 }
