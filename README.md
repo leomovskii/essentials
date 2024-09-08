@@ -3,9 +3,8 @@ This is compilation of useful scripts (maybe something other in future) for unit
 
 # Table of contents
 1. [Attributes](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/Attributes/attributes-readme.md)
-2. Graphics (In progress)
-3. Architecture (In progress)
-4. Utilities (In progress)
+2. [Architecture] (https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/Architecture/architecture-readme.md)
+3. Other documenting in progress
 
 # Installing
 Download actual .unitypackage release and import to project dragging to 'Project' Tab or using 'Assets / Import Package / Custom Package' tab.
