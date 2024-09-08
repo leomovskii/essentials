@@ -2,10 +2,10 @@
 This is a utility for packing and unpacking boolean flags into a single int value. The class allows you to compactly store up to 32 boolean values ​​(flags) in a single number, which saves memory and simplifies working with multiple flags. In addition to packing and unpacking, the utility allows you to modify individual flags and check for other flags.
 
 ## Methods:
-* Pack(bool[] flags) — packs an array of boolean values ​​into a single integer (int).
-* Unpack(int packedFlags) — unpacks flags from an integer back into an array of boolean values.
-* ModifyFlag(int packedFlags, int flagIndex, bool newFlagState) — changes the state of a specific flag in a packed value.
-* HasAtLeastOtherFlag(int packedFlags, int excludeFlagIndex) — checks if there are any enabled flags other than the specified one.
+* **Pack(bool[] flags)** — packs an array of boolean values ​​into a single integer (int).
+* **Unpack(int packedFlags)** — unpacks flags from an integer back into an array of boolean values.
+* **ModifyFlag(int packedFlags, int flagIndex, bool newFlagState)** — changes the state of a specific flag in a packed value.
+* **HasAtLeastOtherFlag(int packedFlags, int excludeFlagIndex)** — checks if there are any enabled flags other than the specified one.
 
 ## Usage example
 ``` csharp
@@ -37,7 +37,7 @@ public class FlagTest : MonoBehaviour {
 The NumberShortenerUtility class shortens large numbers by adding appropriate suffixes (e.g., "K", "M", "B", etc.) based on the magnitude of the number. It works for numbers in thousands, millions, billions, etc., and allows formatting of the shortened number using a specified format string. The suffix can also be set to uppercase or lowercase.
 
 ## Methods:
-* Short(double number, string format = "0", bool uppercase = true) - takes a number and returns it in a shortened form with an appropriate suffix.
+* **Short(double number, string format = "0", bool uppercase = true)** - takes a number and returns it in a shortened form with an appropriate suffix.
 
 You can provide a format for the number (e.g., "0.0" for one decimal place). The suffix can be uppercase or lowercase based on the uppercase flag.
 
@@ -68,14 +68,14 @@ public class NumberShortenerTest : MonoBehaviour {
 This class is a wrapper around Unity's PlayerPrefs, providing convenient methods for saving and retrieving data types that are not directly supported by the standard PlayerPrefs methods (e.g., bool, long, double, uint). For numeric types, values are stored as strings using CultureInfo.InvariantCulture to ensure correct formatting and parsing regardless of the user's locale.
 
 ## Methods
-* GetBool(string key, bool defaultValue = false) - retrieves a boolean value from PlayerPrefs. If the key doesn't exist, the provided defaultValue is returned. Internally, the boolean is stored as 1 for true and 0 for false.
-* SetBool(string key, bool value) - saves a boolean value into PlayerPrefs, converting true to 1 and false to 0.
-* GetLong(string key, long defaultValue = 0L) - retrieves a long value from PlayerPrefs, stored as a string. If the key doesn't exist or the value can't be parsed, it returns the provided defaultValue.
-* SetLong(string key, long value) - saves a long value into PlayerPrefs, converting it to a string.
-* GetDouble(string key, double defaultValue = 0.0) - retrieves a double value from PlayerPrefs, stored as a string. If parsing fails, it returns the provided defaultValue.
-* SetDouble(string key, double value) - saves a double value into PlayerPrefs as a string.
-* GetUint(string key, uint defaultValue = 0u) - retrieves an uint value from PlayerPrefs. Like the other numeric types, it's stored as a string and returned after parsing, or the defaultValue is returned on failure.
-* SetUint(string key, uint value) - saves an uint value into PlayerPrefs as a string.
+* **GetBool(string key, bool defaultValue = false)** - retrieves a boolean value from PlayerPrefs. If the key doesn't exist, the provided defaultValue is returned. Internally, the boolean is stored as 1 for true and 0 for false.
+* **SetBool(string key, bool value)** - saves a boolean value into PlayerPrefs, converting true to 1 and false to 0.
+* **GetLong(string key, long defaultValue = 0L)** - retrieves a long value from PlayerPrefs, stored as a string. If the key doesn't exist or the value can't be parsed, it returns the provided defaultValue.
+* **SetLong(string key, long value)** - saves a long value into PlayerPrefs, converting it to a string.
+* **GetDouble(string key, double defaultValue = 0.0)** - retrieves a double value from PlayerPrefs, stored as a string. If parsing fails, it returns the provided defaultValue.
+* **SetDouble(string key, double value)** - saves a double value into PlayerPrefs as a string.
+* **GetUint(string key, uint defaultValue = 0u)** - retrieves an uint value from PlayerPrefs. Like the other numeric types, it's stored as a string and returned after parsing, or the defaultValue is returned on failure.
+* **SetUint(string key, uint value)** - saves an uint value into PlayerPrefs as a string.
 
 ## Usage example
 ``` csharp
