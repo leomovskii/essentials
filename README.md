@@ -9,4 +9,4 @@ This is compilation of useful scripts (maybe something other in future) for unit
 5. Other documenting in progress
 
 # Installing
-Download actual .unitypackage release and import to project dragging to 'Project' Tab or using 'Assets / Import Package / Custom Package' tab.
+Download actual .unitypackage release and import to project dragging to **Project** Tab or using **Assets/Import Package/Custom Package** menu.
