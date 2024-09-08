@@ -31,11 +31,6 @@ namespace Essentials {
 					var propertyInfo = (PropertyInfo) memberInfo;
 					shouldShow = (bool) propertyInfo.GetValue(target);
 					break;
-
-					case MemberTypes.Event:
-					var eventInfo = (EventInfo) memberInfo;
-					shouldShow = eventInfo != null;
-					break;
 				}
 			}
 
