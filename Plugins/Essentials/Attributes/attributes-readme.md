@@ -12,3 +12,7 @@ public enum Options {
 // using
 [Flags, SerializeField] private Options _options;
 ```
+![image](https://github.com/user-attachments/assets/e02e07f2-4a87-4d84-82bc-8ded2fc6a41c)
+
+# MinMax
+Used to replace 'x' and 'y' in Vector2 and Vector2Int names with Min and Max respectively. Also constrains values ​​so that Max is never less than Min. Example:
