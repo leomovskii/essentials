@@ -34,3 +34,49 @@ Used to display empty or missing references of the ObjectReference and ExposedRe
 ```
 
 ![image](https://github.com/user-attachments/assets/a98453f4-df06-4e4c-9473-4961ade06ca4)
+
+# Preview
+Used to preview images directly in the inspector. The preview is hidden if the link is empty. Can be combined with the NotNull attribute. Example:
+``` csharp
+[Preview, SerializeField] private Sprite _sprite;
+[Preview, SerializeField] private Texture _texture;
+[Preview, SerializeField] private Texture2D _texture2D;
+```
+
+![image](https://github.com/user-attachments/assets/717915cc-f474-4bb0-93a6-d1468f49310d)
+
+# RangeSlider
+Used to create a range of values ​​within the constraint range for Vector2 and Vector2Int fields. Example:
+``` csharp
+[RangeSlider(0f, 100f), SerializeField] private Vector2 _floatSlider = new Vector2(17f, 34f);
+[RangeSlider(0, 100), SerializeField] private Vector2Int _intSlider = new Vector2Int(30, 90);
+```
+
+![image](https://github.com/user-attachments/assets/46f6154c-92d4-417e-9dc4-153692a853c5)
+
+# ReadOnly
+Used to prohibit editing of fields in the inspector. Example:
+``` csharp
+[SerializeField] private float _editableField;
+[ReadOnly, SerializeField] private float _readOnlyField;
+```
+
+![image](https://github.com/user-attachments/assets/65dfdbb0-e60a-434a-8693-9312bee560ff)
+
+# ShowIf
+Used to hide and show certain fields in the inspector depending on conditions. The condition can be a bool field, property or method. Example:
+``` csharp
+[SerializeField] private bool _boolFlag;
+
+[ShowIf(nameof(_boolFlag)), SerializeField] private int _fieldDepentField;
+[ShowIf(nameof(BoolMethod)), SerializeField] private int _methodDepentField;
+[ShowIf(nameof(BoolProperty)), SerializeField] private int _propertyDepentField;
+
+private bool BoolProperty => _boolFlag;
+
+private bool BoolMethod() {
+	return _boolFlag;
+}
+```
+
+![image](https://github.com/user-attachments/assets/234baf89-1588-4200-aabd-f050437875e9)
