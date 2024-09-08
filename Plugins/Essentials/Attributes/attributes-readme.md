@@ -64,13 +64,13 @@ Used to prohibit editing of fields in the inspector. Example:
 ![image](https://github.com/user-attachments/assets/65dfdbb0-e60a-434a-8693-9312bee560ff)
 
 # ShowIf
-Used to hide and show certain fields in the inspector depending on conditions. The condition can be a bool field, property or method. Example:
+Used to hide and show certain fields in the inspector depending on conditions. The condition can be a bool field, property or method. The attribute takes two arguments, where the first is the name of the class member (reflection is used!), and the second is an optional (default, true) boolean flag against which the value of the target field will be compared. Example:
 ``` csharp
 [SerializeField] private bool _boolFlag;
 
 [ShowIf(nameof(_boolFlag)), SerializeField] private int _fieldDepentField;
-[ShowIf(nameof(BoolMethod)), SerializeField] private int _methodDepentField;
-[ShowIf(nameof(BoolProperty)), SerializeField] private int _propertyDepentField;
+[ShowIf(nameof(BoolMethod), true), SerializeField] private int _methodDepentField;
+[ShowIf(nameof(BoolProperty), false), SerializeField] private int _propertyDepentField;
 
 private bool BoolProperty => _boolFlag;
 
@@ -78,5 +78,4 @@ private bool BoolMethod() {
 	return _boolFlag;
 }
 ```
-
-![image](https://github.com/user-attachments/assets/234baf89-1588-4200-aabd-f050437875e9)
+![image](https://github.com/user-attachments/assets/ff6d959a-6249-43c1-bd50-2204cd666a05)
