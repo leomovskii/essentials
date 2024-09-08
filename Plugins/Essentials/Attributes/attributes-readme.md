@@ -24,4 +24,13 @@ Used to replace 'x' and 'y' in Vector2 and Vector2Int names with Min and Max res
 ![image](https://github.com/user-attachments/assets/e8318d69-e5c6-41d1-8747-979a38a9e91d)
 
 # NotNull
+Used to display empty or missing references of the ObjectReference and ExposedReference categories. Also check ManagedReference on 2021.2 and above. Additionally checks if string field is empty. Example:
+``` csharp
+[NotNull, SerializeField] private Rigidbody2D _rigidbody;
+[NotNull, SerializeField] private string _name;
+[NotNull, SerializeField] private GameObject _prefab;
+[NotNull, SerializeField] private ScriptableObject _data;
+[NotNull, SerializeField] private Text _uiText;
+```
 
+![image](https://github.com/user-attachments/assets/a98453f4-df06-4e4c-9473-4961ade06ca4)
