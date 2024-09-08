@@ -3,7 +3,7 @@ This is compilation of useful scripts (maybe something other in future) for unit
 
 # Table of contents
 1. [Attributes](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/Attributes/attributes-readme.md)
-2. [Architecture] (https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/Architecture/architecture-readme.md)
+2. [Architecture](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/Architecture/architecture-readme.md)
 3. Other documenting in progress
 
 # Installing
