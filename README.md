@@ -5,7 +5,8 @@ This is compilation of useful scripts (maybe something other in future) for unit
 1. [Attributes](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/Attributes/attributes-readme.md)
 2. [Architecture](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/Architecture/architecture-readme.md)
 3. [Gameplay Utilities](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/GameplayUtilities/gameplay-utilities-readme.md)
-4. Other documenting in progress
+4. [Code Utilities](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/CodeUtilities/code-utilities-readme.md)
+5. Other documenting in progress
 
 # Installing
 Download actual .unitypackage release and import to project dragging to 'Project' Tab or using 'Assets / Import Package / Custom Package' tab.
