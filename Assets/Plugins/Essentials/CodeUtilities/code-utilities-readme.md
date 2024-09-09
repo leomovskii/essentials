@@ -7,7 +7,7 @@ This is a utility for packing and unpacking boolean flags into a single int valu
 * **ModifyFlag(int packedFlags, int flagIndex, bool newFlagState)** — changes the state of a specific flag in a packed value.
 * **HasAtLeastOtherFlag(int packedFlags, int excludeFlagIndex)** — checks if there are any enabled flags other than the specified one.
 
-## Usage example
+## Usage
 ``` csharp
 public class FlagTest : MonoBehaviour {
     private void Start() {
@@ -41,7 +41,7 @@ The NumberShortenerUtility class shortens large numbers by adding appropriate su
 
 You can provide a format for the number (e.g., "0.0" for one decimal place). The suffix can be uppercase or lowercase based on the uppercase flag.
 
-## Usage example
+## Usage
 ``` csharp
 public class NumberShortenerTest : MonoBehaviour {
 	private void Start() {
@@ -77,7 +77,7 @@ This class is a wrapper around Unity's PlayerPrefs, providing convenient methods
 * **GetUint(string key, uint defaultValue = 0u)** - retrieves an uint value from PlayerPrefs. Like the other numeric types, it's stored as a string and returned after parsing, or the defaultValue is returned on failure.
 * **SetUint(string key, uint value)** - saves an uint value into PlayerPrefs as a string.
 
-## Usage example
+## Usage
 ``` csharp
 public class PrefsExample : MonoBehaviour {
 
@@ -101,6 +101,38 @@ public class PrefsExample : MonoBehaviour {
         Prefs.SetUint("coins", 500u);
         uint coins = Prefs.GetUint("coins", 0u);
         Debug.Log($"Coins: {coins}");
+    }
+}
+```
+
+# RomanNumeralConverter
+Utility for converting between Roman numerals and Arabic numbers (uint). The conversion supports numbers from 1 to 3,999,999, where large numbers (over 1,000) are represented with parentheses around 'M'. For example, 1,000,000 is represented as "(M)".
+
+## Methods
+* ToRoman(uint number) - converts an Arabic number (uint) to its Roman numeral string equivalent.
+* FromRoman(string roman) - converts a Roman numeral string back into its Arabic number (uint) equivalent.
+
+## Usage
+``` csharp
+public class RomanNumeralSample : MonoBehaviour {
+    void Start() {
+        // Example Arabic number to convert
+        uint arabicNumber = 1987;
+
+        // Convert the Arabic number to Roman numeral string
+        string romanNumeral = RomanNumeralConverter.ToRoman(arabicNumber);
+        Debug.Log($"Arabic {arabicNumber} -> Roman {romanNumeral}");
+
+        // Convert the Roman numeral string back to Arabic number
+        uint convertedBack = RomanNumeralConverter.FromRoman(romanNumeral);
+        Debug.Log($"Roman {romanNumeral} -> Arabic {convertedBack}");
+
+        // Verify if the conversion back and forth is correct
+        if (arabicNumber == convertedBack) {
+            Debug.Log("Conversion back and forth is successful!");
+        } else {
+            Debug.LogError("Conversion mismatch!");
+        }
     }
 }
 ```
