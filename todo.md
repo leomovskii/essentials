@@ -20,3 +20,9 @@ Adds a prefix to the inspector's numeric field indicating the units used.
 ```
 
 ![image](https://github.com/user-attachments/assets/4914dd9c-69c4-48b8-a84a-d58faccffd8a)
+
+### InfoBox (probably HelpBox)
+
+![image](https://github.com/user-attachments/assets/e68e26b2-cb85-4d7e-af40-a8ebef11d990)
+
+![image](https://github.com/user-attachments/assets/8fac71ba-308b-4235-ba0a-c14a76f712bb)
