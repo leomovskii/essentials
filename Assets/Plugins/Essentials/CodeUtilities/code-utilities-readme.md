@@ -109,8 +109,8 @@ public class PrefsExample : MonoBehaviour {
 Utility for converting between Roman numerals and Arabic numbers (uint). The conversion supports numbers from 1 to 3,999,999, where large numbers (over 1,000) are represented with parentheses around 'M'. For example, 1,000,000 is represented as "(M)".
 
 ## Methods
-* ToRoman(uint number) - converts an Arabic number (uint) to its Roman numeral string equivalent.
-* FromRoman(string roman) - converts a Roman numeral string back into its Arabic number (uint) equivalent.
+* **ToRoman(uint number)** - converts an Arabic number (uint) to its Roman numeral string equivalent.
+* **FromRoman(string roman)** - converts a Roman numeral string back into its Arabic number (uint) equivalent.
 
 ## Usage
 ``` csharp
