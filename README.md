@@ -7,7 +7,7 @@ This is compilation of useful scripts (maybe something other in future) for unit
 3. [Gameplay Utilities](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/GameplayUtilities/gameplay-utilities-readme.md)
 4. [Code Utilities](https://github.com/leomovskii/essentials/blob/main/Assets/Plugins/Essentials/CodeUtilities/code-utilities-readme.md)
 5. Other documenting in progress
-*. [ToDo](https://github.com/leomovskii/essentials/blob/main/todo.md)
+6. [ToDo](https://github.com/leomovskii/essentials/blob/main/todo.md)
 
 # Installing
 Download actual .unitypackage release and import to project dragging to **Project** Tab or using **Assets/Import Package/Custom Package** menu.
