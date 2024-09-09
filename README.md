@@ -12,7 +12,8 @@ This is compilation of useful scripts (maybe something other in future) for unit
 Download actual .unitypackage release and import to project dragging to **Project** Tab or using **Assets/Import Package/Custom Package** menu.
 
 # ToDo
-Add my shaders
-Add xml comments
-Add many different stuff
-Add Math2 info&examples to code-utilities readme
+* Add my shaders
+* Add xml comments
+* Add many different stuff
+* Add Math2 info&examples to code-utilities readme
+* Make 1.3 release with nice documented changelist
