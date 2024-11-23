@@ -28,7 +28,7 @@ namespace Essentials {
 		};
 
 		public static void SetStandartMaterialMode(this Material origin, StandartMaterialRenderMode mode) {
-			bool opaqueOrCutout = mode is StandartMaterialRenderMode.Opaque or StandartMaterialRenderMode.Cutout;
+			bool opaqueOrCutout = mode == StandartMaterialRenderMode.Opaque || mode == StandartMaterialRenderMode.Cutout;
 
 			origin.SetFloat(ModeKey, (int) mode);
 			origin.SetInt(SrcBlendKey, opaqueOrCutout ? (int) BlendMode.One : (int) BlendMode.SrcAlpha);

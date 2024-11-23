@@ -16,8 +16,8 @@ namespace Essentials {
 		public bool IsCompleted => _asyncOp.isDone;
 
 		public void GetResult() {
-			if (_asyncOp.webRequest.result is UnityWebRequest.Result.ConnectionError or
-				UnityWebRequest.Result.ProtocolError)
+			if (_asyncOp.webRequest.result == UnityWebRequest.Result.ConnectionError ||
+				_asyncOp.webRequest.result == UnityWebRequest.Result.ProtocolError)
 				Debug.LogError(_asyncOp.webRequest.error);
 		}
 

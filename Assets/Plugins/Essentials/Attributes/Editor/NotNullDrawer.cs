@@ -48,12 +48,11 @@ namespace Essentials {
 		}
 
 		private bool IsPropertyTypeSupported(SerializedPropertyType propertyType) {
-			return propertyType
-				is SerializedPropertyType.String
-				or SerializedPropertyType.ObjectReference
-				or SerializedPropertyType.ExposedReference
+			return propertyType == SerializedPropertyType.String
+				|| propertyType == SerializedPropertyType.ObjectReference
+				|| propertyType == SerializedPropertyType.ExposedReference
 #if UNITY_2021_2_OR_NEWER
-				or SerializedPropertyType.ManagedReference
+				|| propertyType == SerializedPropertyType.ManagedReference
 #endif
 				;
 		}
