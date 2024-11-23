@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 
-using Random = UnityEngine.Random;
-
 namespace Essentials {
 	public static class EnumExtensions {
 		public static T GetRandomValue<T>(int startIndex = 0) where T : Enum {
@@ -12,7 +10,7 @@ namespace Essentials {
 				startIndex = 0;
 			}
 
-			int randomIndex = Random.Range(startIndex, values.Length);
+			int randomIndex = UnityEngine.Random.Range(startIndex, values.Length);
 			return (T) values.GetValue(randomIndex);
 		}
 
@@ -28,7 +26,7 @@ namespace Essentials {
 				endIndex = values.Length - 1;
 			}
 
-			int randomIndex = Random.Range(startIndex, endIndex);
+			int randomIndex = UnityEngine.Random.Range(startIndex, endIndex);
 			return (T) values.GetValue(randomIndex);
 		}
 	}

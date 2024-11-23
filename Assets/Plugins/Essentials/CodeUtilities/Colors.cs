@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Essentials {
-	public static class ColorExtensions {
+	public static class Colors {
 
 		#region Color list
 
@@ -428,10 +428,6 @@ namespace Essentials {
 		public static Color Snow => White;
 
 		#endregion
-
-		public static string ToHex(this Color color) {
-			return ColorUtility.ToHtmlStringRGBA(color);
-		}
 
 		public static Color FromHex(string origin) {
 			return ColorUtility.TryParseHtmlString(origin, out var color) ? color : Clear;

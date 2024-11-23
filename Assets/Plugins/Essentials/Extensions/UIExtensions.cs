@@ -7,31 +7,27 @@ using UnityEngine.UI;
 namespace Essentials {
 	public static class UIExtensions {
 
-		private static bool CheckCallback(Action callback) {
-			if (callback == null) {
-				Debug.LogWarning("Can't add empty callback.");
-				return false;
-			}
-			return true;
-		}
-
 		/// <summary>
 		/// Simple way to add callback to toggle with filter.
 		/// </summary>
 		public static void AddCallback(this Toggle origin, Action callback, bool condition = true) {
-			if (CheckCallback(callback))
+			if (callback != null)
 				origin.onValueChanged.AddListener(e => {
 					if (e == condition)
 						callback?.Invoke();
 				});
+			else
+				Debug.LogWarning("Can't add empty callback.");
 		}
 
 		/// <summary>
 		/// Simple way to add callback to button.
 		/// </summary>
 		public static void AddCallback(this Button origin, Action callback) {
-			if (CheckCallback(callback))
+			if (callback != null)
 				origin.onClick.AddListener(() => callback());
+			else
+				Debug.LogWarning("Can't add empty callback.");
 		}
 
 		/// <summary>
