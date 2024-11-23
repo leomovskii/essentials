@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Essentials {
-	public static class Animations {
+	public static class AnimationExtensions {
 
 		public async static void Pause(this Animator origin, float time) {
 			if (origin == null)

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Essentials {
-	public static class Colors {
+	public static class ColorExtensions {
 
 		#region Color list
 

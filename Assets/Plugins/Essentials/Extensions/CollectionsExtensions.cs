@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Essentials {
-	public static class Collections {
+	public static class CollectionsExtensions {
 
 		public static T Random<T>(this List<T> origin) {
 			return origin != null && origin.Any() ? origin[UnityEngine.Random.Range(0, origin.Count)] : default;

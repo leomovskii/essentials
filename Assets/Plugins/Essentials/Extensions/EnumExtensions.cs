@@ -4,7 +4,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Essentials {
-	public static class Enums {
+	public static class EnumExtensions {
 		public static T GetRandomValue<T>(int startIndex = 0) where T : Enum {
 			var values = Enum.GetValues(typeof(T));
 			if (startIndex < 0 || startIndex >= values.Length) {

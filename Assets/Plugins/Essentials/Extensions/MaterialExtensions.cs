@@ -12,7 +12,7 @@ namespace Essentials {
 		Transparent
 	}
 
-	public static class Materials {
+	public static class MaterialExtensions {
 
 		private readonly static string ModeKey = "_Mode";
 		private readonly static string SrcBlendKey = "_SrcBlend";

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 namespace Essentials {
-	public static class MonoBeh {
+	public static class MonoBehaviorExtensions {
 
 		public static void StartCoroutineSafe(this MonoBehaviour origin, ref Coroutine coroutine, IEnumerator routine) {
 			if (coroutine != null)
