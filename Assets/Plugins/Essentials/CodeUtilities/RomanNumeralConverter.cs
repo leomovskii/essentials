@@ -32,7 +32,7 @@ namespace Essentials {
 		/// <returns>The Roman numeral string equivalent.</returns>
 		/// <exception cref="ArgumentOutOfRangeException">Thrown if the number is not in the valid range.</exception>
 		public static string ToRoman(uint number) {
-			if (number is 0 or > 3999999)
+			if (number == 0 || number == 3999999)
 				throw new ArgumentOutOfRangeException(nameof(number), "Value must be between 1 and 3,999,999.");
 
 			string result = "";
