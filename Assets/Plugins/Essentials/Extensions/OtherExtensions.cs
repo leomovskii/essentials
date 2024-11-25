@@ -10,6 +10,17 @@ namespace Essentials {
 			return origin.CompareTo(max) > 0 ? max : origin.CompareTo(min) < 0 ? min : origin;
 		}
 
+		#region LayerMask
+
+		public static bool Contains(this LayerMask origin, RaycastHit hit) {
+			return ((1 << hit.transform.gameObject.layer) & origin) != 0;
+		}
+
+		public static bool Contains(this LayerMask origin, int layer) {
+			return ((1 << layer) & origin) != 0;
+		}
+
+		#endregion
 		#region Color
 
 		public static string ToHex(this Color color) {
