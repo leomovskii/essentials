@@ -308,5 +308,49 @@ namespace Essentials {
 			PlayerPrefs.SetString(key, base64);
 		}
 		#endregion
+		#region DateTime
+		private readonly static string FormatDateTime = "yyyy-MM-dd HH:mm:ss";
+		private readonly static string FormatDate = "yyyy-MM-dd";
+		private readonly static string FormatTime = "HH:mm:ss";
+
+		/// <summary>Specifies the available time formats.</summary>
+		public enum TimeFormat {
+			DateTime, Date, Time24
+		}
+
+		public static string ToString(this TimeFormat origin) {
+			return origin switch {
+				TimeFormat.DateTime => FormatDateTime,
+				TimeFormat.Date => FormatDate,
+				TimeFormat.Time24 => FormatTime,
+				_ => FormatDateTime
+			};
+		}
+
+		/// <summary>
+		/// Retrieves a DateTime value from PlayerPrefs.
+		/// </summary>
+		/// <param name="key">The key of the preference to retrieve.</param>
+		/// <param name="defaultValue">The default value if the key does not exist.</param>
+		/// <param name="timeFormat">The time format used to parse the stored value.</param>
+		/// <returns>Returns the stored DateTime value or the default value.</returns>
+		public static DateTime GetDateTime(string key, DateTime defaultValue, TimeFormat timeFormat) {
+			string data = PlayerPrefs.GetString(key);
+			return !string.IsNullOrEmpty(data) &&
+				DateTime.TryParseExact(data, timeFormat.ToString(), CultureInfo.InvariantCulture,
+				DateTimeStyles.None, out DateTime dateTime) ? dateTime : defaultValue;
+		}
+
+		/// <summary>
+		/// Stores a DateTime value in PlayerPrefs.
+		/// </summary>
+		/// <param name="key">The key to store the value under.</param>
+		/// <param name="value">The DateTime value to store.</param>
+		/// <param name="timeFormat">The time format to use for storing the value.</param>
+		public static void SetDateTime(string key, DateTime value, TimeFormat timeFormat) {
+			string data = value.ToString(timeFormat.ToString());
+			PlayerPrefs.SetString(key, data);
+		}
+		#endregion
 	}
 }
