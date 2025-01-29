@@ -55,5 +55,21 @@ namespace Essentials {
 			toAdd.z += origin.z;
 			return toAdd;
 		}
+
+		public static float Random(this Vector2 origin) {
+			return UnityEngine.Random.Range(origin.x, origin.y);
+		}
+
+		public static int Random(this Vector2Int origin) {
+			return UnityEngine.Random.Range(origin.x, origin.y);
+		}
+
+		public static float Clamp(this Vector2 origin, float value) {
+			return value < origin.x ? origin.x : (value > origin.y ? origin.y : value);
+		}
+
+		public static int Clamp(this Vector2Int origin, int value) {
+			return value < origin.x ? origin.x : (value > origin.y ? origin.y : value);
+		}
 	}
 }
